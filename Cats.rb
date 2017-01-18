@@ -7,7 +7,11 @@ class Cat
     @preferred_food = preferred_food
     @meal_time = meal_time
   end
-  def eats_at(meal_time)
+  def eat_at
+    @mealtime = @mealtime
+    puts " #{@meal_time} PM"
+  end
+  def meow
     @mealtime = @mealtime
     puts "My name is #{name}" + "i love to eat #{preferred_food}" +"at #{meal_time}"
   end
