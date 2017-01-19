@@ -1,0 +1,56 @@
+
+
+Object Oriented Programming Part 2
+
+Why do we use OOP?
+- Encapsulation: you draw a boundary around a set of related data and behaviors and can give it a name
+- lets you split up in to sections and makes it easy to collab
+Abstract: King of like a car, we dont know how it works but we know how to use it.
+- can do something w/o knowing how it works, just need to know how it behaves.
+- can use work from other people and build on it without necessarily knowing how it works
+
+Information Hiding:
+- had to write a reader method to see how many pizzas remaining, by default it is secure
+
+Ruby
+Everything is an Object
+
+everything in ruby has a method called .class (p.class will return pizzaria)--> pizza.class is pizza, can use .class to see what the class is.
+- can do this to a string because its an object "examplestring".class
+  - string.length --> returns 6 for 6 characters.
+  Objects have methods
+  -> 5.+(2) = 7. (.+ is a method)
+
+the DOT means invoke. 2.times --> invoke this method on 2
+
+Inheritance: create classes that share some things in common but not everything
+- A house and an apartment are both buildings, so they share that in common
+- A cat and a dog are both mammals
+- Definne a class that can inherit the behavior of a parent class
+- You put specialized behavior in to the class that needs it and nothing more. If it applies to everything beneath it (its children, put it in parent)
+- You get all of the behaviors of the parent, can't pick and choose', but you can ovverride the behavior of the parent class
+- Can use 'super' to override parent class, by calling the method of the superclass (parent) (so you don't repeat yourself')
+- If method of parent does not apply, you have to initialize a new method. (so if you want to add a field of study to PROFESSOR, because it is in the 'person' class and not every person has a field
+of study, we would need to initialize 'professor')
+                 Animals
+                -breathe
+               /         \
+          Mammal        Reptile
+          -walk         -crawl
+          /  \
+      cat    dog
+  -meow
+
+class < person (< means 'inherits' from person) --> in addition to being a proffessor they are also a person so we want it to inherit person class
+
+class professor < person (to determine what you want to define, ask yourself what teachers do students cant -> teach)
+def teach
+  "blah blah blah"
+end
+
+class student < person
+def learn
+  "I get it"
+end
+
+can use .superclass to go one level up (charles.class.superclass) (can also do charles.class.superclass.superclass.superclass)
